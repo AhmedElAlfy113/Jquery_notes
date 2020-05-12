@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Jquery/9-Effects_actions</title>
+		
+		<style type="text/css">
+		
+		
+		</style>
+		
+	</head>
+	<body>
+		
+		
+		<!-- js files -->
+		<script src="Jquery/Jquery-3.5.1.min.js"></script>
+		<script type="text/javascript">
+		
+			// action / effect is the function that applied to the element when an event fire
+			// if there is no event detected the ready or load event will consider the default event and function will execute when page load and be ready
+			
+			// effects may be change and do something or get and set values
+			// when change or do something you detect speed and may add callback function fired after effect done
+			
+			$("element").effect(speed, callback function);
+			
+			// in some effects you can add more than action by using block code {}
+			
+			$("element").effect({
+			
+				action1 : value,
+				action2 : value,
+				
+				// in action name we use camelCase or underscore _ and double or single quotes 
+				// if value string we use double or single quotes "" ''
+				
+				actionThree : "value three", 
+				"action_three" : "value three", 
+				"action_three" : value3
+			
+			});
+			
+			// get functions are destructive functions break the chain // will explained later 
+			
+		</script>
+	</body>
+</html>

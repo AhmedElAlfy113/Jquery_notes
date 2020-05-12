@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Jquery/3-dollar_sign</title>
+	</head>
+	<body>
+		<h1>hello</h1>
+		<h2>hello</h2>
+		<h3>hello</h3>
+		<!-- js files -->
+		<script src="Jquery/Jquery-3.5.1.min.js"></script>
+		<script type="text/javascript">
+		
+			// jQuery use $ but may there is other libraries else use $
+			
+			// so you can put $ as parameter to make sure it related to Jquery code
+			$(function ($) {
+			
+				$("h1").css("backgroundColor","gray");
+			
+			});
+			
+			// or you can use block code 
+			(function($) {
+				
+				$("h2").css("color","red");
+				
+			})(jQuery)
+			
+			// or you can use $.noConflict() function to make any sign and use it instead $
+			var jq = $.noConflict();
+			
+			jq("h3").css("color", "blue");
+		
+		
+		</script>
+	</body>
+</html>

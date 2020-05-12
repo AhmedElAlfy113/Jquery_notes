@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Jquery/8-Events/on/one</title>
+		
+		<style type="text/css">
+		
+		
+		</style>
+		
+	</head>
+	<body>
+		
+		<p>paragraph 1</p>
+		<p>paragraph 2</p>
+		
+		<!-- js files -->
+		<script src="Jquery/Jquery-3.5.1.min.js"></script>
+		<script type="text/javascript">
+		
+			// on(), one() => used to add event or more than to the element
+			
+			/** Syntax **
+			
+				$(element).on("event", function () {
+				
+				});
+				
+				$(element).one("event", function () {
+				
+				});
+				
+				
+				// you can add more than one event to the same element//
+				
+				
+				$(element).on("event1 event2 event3", function () {
+				
+				});
+				
+				$(element).one("event1 event2 event3", function () {
+				
+				});
+				
+				
+				// you can add more than one event and give each event special function to the same element by using block code {}
+				
+				
+				$(element).on({
+				
+					event1 : function () {},
+					event2 : function () {},
+					event3 : function () {}
+				
+				});
+				
+				$(element).one({
+				
+				event1 : function () {},
+				event2 : function () {},
+				event3 : function () {}
+				
+				});
+			
+			*/
+			
+			
+			
+			// the difference between two ways
+			$("p:eq(0)").on("click", function () {
+			
+				$(this).after("<p>new paragraph</p>");
+				
+				// every time when click on first p will creat new p
+			
+			});
+			
+			$("p:eq(1)").one("click", function () {
+			
+				$(this).after("<p>new paragraph</p>");
+			
+				// when click on last p will creat new p but just for one time, if you clicked again will do nothing
+			
+			});
+			
+			
+			/** note **
+				it prefer to use on("event", function (){}); instead of event();
+			*/
+			
+		</script>
+	</body>
+</html>

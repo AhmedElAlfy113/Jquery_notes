@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Jquery/16-content_manipulation</title>
+		
+		<style type="text/css">
+		
+		</style>
+		
+	</head>
+	<body>
+		
+		<p>paragraph 1</p>
+		<p>paragraph 2</p>
+		<p>paragraph 3</p>
+		<p>paragraph 4</p>
+		<input type="text" value="Ahmed El-Alfy" />
+		<input type="text" value="Ali Mohamed" />
+	
+		<!-- js files -->
+		<script src="Jquery/Jquery-3.5.1.min.js"></script>
+		<script type="text/javascript">
+		
+			// content get & set //
+			
+			// html() => get & set html content
+			$("p:eq(0)").on("click", function() {
+			
+				alert($(this).html()); // get html 
+			
+			});
+			
+			$("p:eq(1)").on("click", function() {
+			
+				$(this).html("<h1>heading</h1>"); // set html
+			
+			});
+			
+			
+			// text() => get & set text
+			$("p:eq(2)").on("click", function() {
+			
+				alert($(this).text()); // get text 
+			
+			});
+			
+			$("p:eq(3)").on("click", function() {
+			
+				$(this).text("hello world"); // set text
+			
+			});
+			
+			
+			// val() => get & set field value
+			$("input:eq(0)").on("click", function() {
+			
+				alert($(this).val()); // get value 
+			
+			});
+			
+			$("input:eq(1)").on("click", function() {
+			
+				$(this).val("Ahmed El-Alfy"); // set value
+			
+			});
+			
+			
+		</script>
+	</body>
+</html>

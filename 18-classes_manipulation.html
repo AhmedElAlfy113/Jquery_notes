@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Jquery/18-classes_manipulation</title>
+		
+		<style type="text/css">
+		
+		.red { color: red; }
+		
+		.big { font-size: 30px; }
+		
+		</style>
+		
+	</head>
+	<body>
+		
+		<p class="parag">paragraph 1</p>
+		<p>paragraph 2</p>
+		<p>paragraph 3</p>
+		<p class="red big">paragraph 4</p>
+		<p class="red big">paragraph 5</p>
+		<p>paragraph 6</p>
+		<p>paragraph 7</p>
+	
+		<!-- js files -->
+		<script src="Jquery/Jquery-3.5.1.min.js"></script>
+		<script type="text/javascript">
+		
+			// classes get & set(add) or remove and toggle //
+			
+			// attr("class") => use it to get class
+			$("p:eq(0)").on("click", function() {
+			
+				alert($(this).attr("class")); // get class
+			
+			});
+			
+			
+			//addClass("class1 class2") => to set(add) class or more than one class
+			$("p:eq(1)").on("click", function() {
+			
+				$(this).addClass("red"); // add class
+				
+			
+			});
+			
+			$("p:eq(2)").on("click", function() {
+			
+				$(this).addClass("red big"); // add more than one class
+			
+			
+			});
+			
+			
+			//removeClass("class1 class2") => to remove class or more than one class 
+			$("p:eq(3)").on("click", function() {
+			
+				$(this).removeClass("red"); // remove class
+				
+			
+			});
+			
+			$("p:eq(4)").on("click", function() {
+			
+				$(this).removeClass("red big"); // remove more than one class
+			
+			
+			});
+			
+			
+			//toggleClass("class1 class2") => toggle class or more than one class, put it if not exist or remove it if exist
+			$("p:eq(5)").on("click", function() {
+			
+				$(this).toggleClass("red"); // toggle class
+				
+			
+			});
+			
+			$("p:eq(6)").on("click", function() {
+			
+				$(this).toggleClass("red big"); // toogle more than one class
+			
+			
+			});
+			
+			
+		</script>
+	</body>
+</html>

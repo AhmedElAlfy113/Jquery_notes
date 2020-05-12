@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Jquery/6-Events</title>
+		
+		<style type="text/css">
+		
+		
+		</style>
+		
+	</head>
+	<body>
+		
+		<button>click</button>
+		<p>hover me</p>
+		
+		<!-- js files -->
+		<script src="Jquery/Jquery-3.5.1.min.js"></script>
+		<script type="text/javascript">
+		
+			// event contains a function and added to element when fired the function execute this function contains an action
+			
+			/**	general Syntax **
+			
+			$("element").event(function (){
+				$("element").action();
+			});
+			
+			*/
+			
+			$("button").click(function () {
+				$(this).css("width", "200px"); // this refers to parent (button)
+				alert("hello world");
+			});
+			
+			/** common events **
+				* click()
+				* dblclick()
+				* mouseenter()
+				* mouseleave()
+				* mousemove()
+				* hover()
+				* keypress()
+				* keyup()
+				* keydown()
+				* submit()
+				* change()
+				* select()
+				* focus()
+				* blur()
+				* load()
+				* resize()
+				* scroll()
+				* unload()
+				* ready()
+				* contextmenu() => when mouse right click 
+			*/
+			
+			// hover() => take 2 functions one in mouseenter and other when mouseleave
+			$("p").hover(
+				function () {
+					$(this).text("you are hovering now");
+				},
+				function () {
+					$(this).text("hover me");
+				}
+			);
+			
+			/** note **
+				action is a function and else take a call back function will explained later 
+			*/
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Jquery/17-attributes_manipulation</title>
+		
+		<style type="text/css">
+		
+		a {
+			display: block;
+			margin-top: 20px;
+		}
+		
+		.red { color: red; }
+		
+		</style>
+		
+	</head>
+	<body>
+		
+		<a href="www.facebook.com" >Facebook</a>
+		<a href="www.quora.com" >Quora</a>
+		<a href="www.youtube.com" title="YouTube">YouTube</a>
+		<a href="www.google.com" >Google</a>
+		<p class="red">paragraph</p>
+	
+		<!-- js files -->
+		<script src="Jquery/Jquery-3.5.1.min.js"></script>
+		<script type="text/javascript">
+		
+			// attribute get & set & remove //
+			
+			// attr("attribute") => get & set attribute
+			$("a:eq(0)").on("click", function() {
+			
+				alert($(this).attr("href")); // get attribute
+			
+			});
+			
+			$("a:eq(1)").on("click", function() {
+			
+				$(this).attr("href", "www.w3schools.com"); // set attribute
+				
+				$(this).text("W3Schools"); // change text
+			
+			});
+			
+			
+			// you can set multiple attributes by block code {} 
+			$("a:eq(2)").on("click", function() {
+			
+				$(this).attr({
+				
+					"href" : "http://www.w3schools.com/jquery",
+				
+					"title" : "W3Schools jQuery Tutorial"
+				
+				});
+			
+			});
+			
+			
+			// you can use callback function in case get attr(get) 
+			$("a:eq(3)").on("click", function() {
+			
+				$(this).attr("href", function () {
+				
+					alert("Google");
+				
+				});
+				
+			});
+			
+			
+			// removeAttr() => Removes attribute 
+			$("p").on("click", function() {
+			
+				$(this).removeAttr("class");
+			
+			});
+			
+			
+		</script>
+	</body>
+</html>

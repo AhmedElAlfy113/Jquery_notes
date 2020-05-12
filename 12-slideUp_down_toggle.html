@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Jquery/12-slideUp_down_toggle</title>
+		
+		<style type="text/css">
+		
+			div.box {
+				width: 200px;
+				height: 200px;
+				margin: 50px auto 0;
+				background-color: #f37059;
+			}
+			
+			div.btns {
+				text-align: center;
+			} 
+			
+			button {
+				border: none;
+				outline: none;
+				display: inline-block;
+				background-color: #f37059;
+				color: #fff;
+				font-size: 16px;
+				border-radius: 10px;
+				width: 80px;
+				height: 40px;
+				line-height: 40px;
+				text-align: center;
+				margin-top: 50px;
+			} 
+		
+		</style>
+		
+	</head>
+	<body>
+		
+		<div class="box"></div>
+		<div class="btns">
+			<button class="slideUp-btn">slide up</button>
+			<button class="slideDown-btn">down</button>
+			<button class="slideToggle-btn">toggle</button>
+		</div>
+		
+		<!-- js files -->
+		<script src="Jquery/Jquery-3.5.1.min.js"></script>
+		<script type="text/javascript">
+		
+			// slideUl, slideDown & slideToggle //
+			
+			// slideUp(speed, callback function) => slideUp element make height 0
+			// callback function optional you can ignore it
+			$(".slideUp-btn").on("click", function () {
+			
+				$(".box").slideUp(1000);
+				
+			});
+			
+			
+			// slideDown(speed, callback function) => slideDown element give it's height
+			// callback function optional you can ignore it
+			$(".slideDown-btn").on("click", function () {
+			
+				$(".box").slideDown(1000);
+			
+			});
+			
+			
+			// slideToggle(speed, callback function) => slide down and up (toggle) element give it's height or make height 0
+			// callback function optional you can ignore it
+			$(".slideToggle-btn").on("click", function () {
+			
+				$(".box").slideToggle(1000);
+			
+			});
+			
+		</script>
+	</body>
+</html>

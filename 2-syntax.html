@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Jquery/2-syntax</title>
+	</head>
+	<body>
+		<h1>hello</h1>
+		<h2>hello</h2>
+		<h3>hello</h3>
+		<!-- js files -->
+		<script src="Jquery/Jquery-3.5.1.min.js"></script>
+		<script type="text/javascript">
+		
+			// Syntax
+			
+			/*
+			
+			 jQuery("selector").event( function () {
+				jQuery("selector").action();
+			 });
+			 
+			 --- Or ---
+			
+			$("selector").event( function () {
+				$("selector").action();
+			});
+			
+			*/
+			
+			// jQuery("selector").action();
+			// Or
+			// $("selector").action();
+			
+			// there is special methods used to add events to a selector
+			// as [on, one] // will explained later
+			/*
+				$("selector").on("event", function () {
+					$("selector").action();
+				});
+			*/
+			
+			
+			// in all examples above you can use $ or jQuery
+			
+			jQuery("h1").css("color", "red");
+			
+			$("h2").css("color", "blue");
+			
+			// action is a function to do something, get or set value
+			// to make sure that all Jquery codes will run after html page load
+			// it prefer to put all Jquery codes between ready event
+			
+			/*
+			
+			$(document).ready( function () {
+			
+			// all codes here
+			
+			});
+			
+			--- Or ---
+			
+			$( function () {
+			
+			// all codes here
+			
+			});
+			
+			*/
+			
+			$(document).ready(function () {
+			
+				$("h3").css("fontSize", "50px");
+				// when property name is composite we use camelCase as backgroundColor, fontWeight
+			
+			});
+			
+			/**note**
+			 action is a Jquery function used to change or do something in the selector
+			*/
+			
+			// there is a method in Jquery called load it make code run after page or selector loaded
+			// the difference between load and ready ?
+			// ready : code run after page is ready all DOM tree ready not waiting until load
+			// load : wait untill DOM tree be ready and loaded 
+			
+			// you can use jQuery().jquery or jQuery.fn.jquery function to know Jquery version
+			
+			console.log(jQuery().jquery);
+			
+		</script>
+	</body>
+</html>

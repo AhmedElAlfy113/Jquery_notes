@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Jquery/4-Selectors</title>
+	</head>
+	<body>
+		<span>span</span>
+		<p id="para">paragraph</p>
+		<p class="para">paragraph</p>
+		<div id="dv">Div</p>
+		<div class="dv">Div</p>
+		
+		<!-- js files -->
+		<script src="Jquery/Jquery-3.5.1.min.js"></script>
+		<script type="text/javascript">
+		
+			// $() or jQuery() function used to select elements from DOM tree
+			// selection process the same as in css
+			
+			// by element, id, class
+			$("span").css("color", "red");
+			$("#para").css("color", "green");
+			$(".para").css("color", "blue");
+			
+			// select more than one 
+			$("#dv, .dv").css("color", "purple");
+			
+			// $("*") => select all elements
+			
+			// $("tr:even"), $("tr:odd") => select even or odd elements
+			
+			// $([href]) => select by attribute
+			
+			// $([href="www"]) => select by attribute href="www"
+			
+			// $([href!="www"]) => select by attribute href not equal www
+			
+			// $([href^="www"]) => select by attribute href start with www
+			
+			// $([href$="www"]) => select by attribute href end with www
+			
+			// $([href*="www"]) => select by attribute href has www
+			
+			// $([href~="www"]) => select by attribute href has specific www
+			
+			// $("div > p") => p in div at first level
+			
+			// $("div p") => all p descend from div
+			
+			// $("div + p") => p next to div
+			
+			// $("div ~ p") => all p next to div
+			
+			// $("p:first"), $("p:last") => select first or last p element
+			
+			// $("p:only-child") => any p that only child of his parent
+			
+			// $("p:only-of-type") => any p that only of type of his parent
+			
+			// $("p:first-child") => any p that first child
+			
+			// $("p:last-child") => any p that last child
+			
+			// $("p:nth-child(no)") => any p that no index child
+			
+			// $("p:nth-last-child(no)") => any p that no index child from last
+			
+			// $("p:first-of-type") => any p that first of type
+			
+			// $("p:last-of-type") => any p that last of type
+			
+			// $("p:nth-of-type(no)") => any p that no index of type
+			
+			// $("p:nth-last-of-type(no)") => any p that no index of type from last
+			
+			// $("p:eq(no)") => p at index
+			
+			// $("p:gt(no)") => all p great than index
+			
+			// $("p:lt(no)") => all p less than index
+			
+			// $("input:not(:empty)") => all inputs except empty one
+			
+			// $("input:filter(:empty)") => all inputs that empty
+			
+			// $(":header") => all headings h1 h2 h3 h4 h5 h6
+			
+			// $(":animated") => all animated elements
+			
+			// $(":focus") => all elements that currently focused
+			
+			// $(":contains('Hello')") => any element containing hello text
+			
+			// $("div:has(p)") => all div element has child p
+			
+			// $(":parent") => any parent elements has child
+			
+			// $(":empty") => any empty element does not have text or content
+			
+			// $(":hidden") => all hidden elements
+			
+			// $(":visible") => all visible elements
+			
+			// $(":input") => all inputs elements
+			
+			// $(":text") => all inputs elements hast type="texf" you can choose any type
+			
+			// $(":checked") => all checked elements
+			
+			// $(":selected") => all selected elements
+			
+			// $(":enabled") => all enabled elements
+			
+			// $(":disabled") => all disabled elements 
+			
+			
+		</script>
+	</body>
+</html>

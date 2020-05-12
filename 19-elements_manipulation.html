@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Jquery/19-elements_manipulation</title>
+		
+		<style type="text/css">
+		
+		p {
+			background-color: #ddd;
+			padding: 5px;
+			display: inline-block;
+		}
+		
+		span {
+			color: #f37059;
+			display: inline-block;
+			margin: 0 5px;
+			background-color: skyblue;
+			padding: 5px;
+		}
+		
+		div {
+			width: 200px;
+			height: 200px;
+			background-color: #ddd;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin: 20px auto 0;
+		}
+		
+		div section {
+			width: 100px;
+			height: 100px;
+			background-color: #666;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: #fff;
+			font-size: 20px;
+		} 
+		
+		</style>
+		
+	</head>
+	<body>
+		
+		<p>paragraph 1</p><br>
+		<p>paragraph 2</p><br>
+		<p>paragraph 3</p><br>
+		<p>paragraph 4</p><br>
+		<p>paragraph 5</p><br>
+		<p>paragraph 6</p><br>
+		<p>paragraph 7</p><br>
+		<p>paragraph 8</p><br>
+		<div>
+			<section>Remove</section>
+		</div>
+		<div>
+			<section>Empty</section>
+		</div>
+	
+		<!-- js files -->
+		<script src="Jquery/Jquery-3.5.1.min.js"></script>
+		<script type="text/javascript">
+		
+			// Elements add & remove or empty //
+			
+			// ** adding element ** //
+			
+			// append() => Inserts content at the end of the selected element
+			$("p:eq(0)").on("click", function() {
+			
+				$(this).append("<span>text 1</span>"); // add element at the end
+			
+			});
+			
+			// appendTo() => Inserts content at the end of the selected element
+			$("p:eq(1)").on("click", function() {
+			
+				$("<span>text 2</span>").appendTo(this); // add element at the end
+			
+			});
+			
+			
+			// prepend() => Inserts content at the beginning of the selected element
+			$("p:eq(2)").on("click", function() {
+			
+				$(this).prepend("<span>text 3</span>"); // add element at the beginning
+			
+			});
+			
+			// prependTo() => Inserts content at the beginning of the selected element
+			$("p:eq(3)").on("click", function() {
+			
+				$("<span>text 4</span>").prependTo(this); // add element at the beginning
+			
+			});
+			
+			
+			// after() => Inserts content after the selected element
+			$("p:eq(4)").on("click", function() {
+			
+				$(this).after("<span>text 5</span>"); // add element after
+			
+			});
+			
+			// insertAfter() => Inserts content after the selected element
+			$("p:eq(5)").on("click", function() {
+			
+				$("<span>text 6</span>").insertAfter(this); // add element after
+			
+			});
+
+			// before() => Inserts content before the selected element
+			$("p:eq(6)").on("click", function() {
+			
+				$(this).before("<span>text 7</span>"); // add element before
+			
+			});
+			
+			// insertBefore() => Inserts content before the selected element
+			$("p:eq(7)").on("click", function() {
+			
+				$("<span>text 8</span>").insertBefore(this); // add element before
+			
+			});
+			
+			// ** remove & empty element ** //
+			
+			// remove() => Removes the selected element (and its child elements)
+			$("div:eq(0)").on("click", function() {
+			
+				$(this).remove(); // remove element
+			
+			});
+			
+			// empty() => Removes the child elements from the selected element, empty selected element from children
+			$("div:eq(1)").on("click", function() {
+			
+				$(this).empty(); // empty element
+			
+			});
+			
+		
+		</script>
+	</body>
+</html>

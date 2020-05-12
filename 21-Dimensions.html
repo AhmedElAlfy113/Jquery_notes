@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Jquery/21-Dimensions</title>
+		
+		<style type="text/css">
+		
+			div {
+				width: 200px;
+				height: 200px;
+				background-color: #f37059;
+				padding: 20px;
+				margin: 30px;
+				border: 2px solid #555;
+			}
+			
+			span {
+				display: block;
+				margin-top: 20px;
+			}
+			
+			span button {
+				border: none;
+				background-color: #f37059;
+				color: #fff;
+				font-size: 16px;
+				padding: 5px 10px;
+				border-radius: 5px;
+			} 
+		
+		</style>
+		
+	</head>
+	<body>
+		
+		<div></div>
+		<span>
+			<button>width</button>
+			<button>height</button>
+		</span>
+		<span>
+			<button>innerWidth</button>
+			<button>innerHeight</button>
+		</span>
+		<span>
+			<button>outerWidth</button>
+			<button>outerHeight</button>
+		</span>
+		<span>
+			<button>outerWidth true</button>
+			<button>outerHeight true</button>
+		</span>
+	
+		<!-- js files -->
+		<script src="Jquery/Jquery-3.5.1.min.js"></script>
+		<script type="text/javascript">
+		
+			// Dimensions //
+			// according (padding, border, margin)
+			
+			// width() / height() => get & set just width and height
+			$("button:eq(0)").on("click", function() {
+			
+				alert($("div").width()); // get width
+				
+				$("div").width("220px"); // set width
+				// you can write just number without quotes
+				// or write number + unit between double or single quotes
+			
+			});
+			
+			$("button:eq(1)").on("click", function() {
+			
+				alert($("div").height()); // get height
+				
+				$("div").height(220); // set height
+			
+			});
+			
+			
+			// innerwidth() / innerheight() => get & set  width and height include padding
+			$("button:eq(2)").on("click", function() {
+			
+				alert($("div").innerWidth()); // get width include padding 
+				
+				$("div").innerWidth(280); // set width include padding
+			
+			});
+			
+			$("button:eq(3)").on("click", function() {
+			
+				alert($("div").innerHeight()); // get height include padding
+				
+				$("div").innerHeight(280); // set height include padding
+			
+			});
+			
+			
+			// outerwidth() / outerheight() => get & set  width and height include padding and border
+			$("button:eq(4)").on("click", function() {
+			
+				alert($("div").outerWidth()); // get width include padding and border 
+				
+				$("div").outerWidth(280); // set width include padding and border 
+			
+			});
+			
+			$("button:eq(5)").on("click", function() {
+			
+				alert($("div").outerHeight()); // get height include padding and border 
+				
+				$("div").outerHeight(280); // set height include padding and border 
+			
+			});
+			
+			
+			// outerwidth(true) / outerheight(true) => get width and height include padding and border and margin
+			$("button:eq(6)").on("click", function() {
+			
+				alert($("div").outerWidth(true)); // get width include padding and border and margin 
+				
+			});
+			
+			$("button:eq(7)").on("click", function() {
+			
+				alert($("div").outerHeight(true)); // get height include padding and border and margin 
+				
+			});
+			
+		
+		</script>
+	</body>
+</html>

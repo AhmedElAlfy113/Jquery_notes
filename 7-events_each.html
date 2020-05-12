@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Jquery/7-Events/each</title>
+		
+		<style type="text/css">
+		
+		
+		</style>
+		
+	</head>
+	<body>
+		
+		<ul class="first">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+		</ul>
+		
+		<ul class="second">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+		</ul>
+		
+		<!-- js files -->
+		<script src="Jquery/Jquery-3.5.1.min.js"></script>
+		<script type="text/javascript">
+		
+			// each() => used to add action / function to each elements as loop
+			
+			$(".first li").each(function () {
+			
+				$(this).css("color", "red");
+				
+				$(this).text("hello");
+			
+			});
+			
+			// in another way 
+			
+			$(".second li").css("color", "red");
+			
+			$(".second li").text("hello");
+			
+			
+			// But what's the difference between two wayes ?
+			
+			
+			// no difference when when set something
+			// But when get something the first way (each) will get for all but second way will get from the first only
+			
+			// in action/function there is a destructive function that end the chain as when get something
+			// to avoid this use each() for loop
+			// destructive functions will be explained later 
+		
+		</script>
+	</body>
+</html>
